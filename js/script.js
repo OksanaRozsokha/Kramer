@@ -9,4 +9,12 @@ $(document).ready(function() {
         }
     });
 
+    $('.scroll').on('click', function () {
+
+        let scrollTo = $(this).attr('data-scrollTo');
+        $('body, html').animate({
+            "scrollTop": $('.' + scrollTo).offset().top}, 2000);
+        return false;
+    });
+
 });
