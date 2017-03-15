@@ -43,7 +43,9 @@ h3 {
 p {
     font: 20px "DroidSerif", serif;
 }
-
+.active {
+    overflow: hidden;
+}
 /*.................HEADER......................*/
 
 .main-header {
@@ -73,10 +75,11 @@ p {
     font: 22px "DroidSans-Regular", sans-serif;
     color: #fff;
 }
-.menu-icon {
+.menu-btn {
     color: transparent;
     display: none;
     padding: 15px;
+    border: none;
 }
 /*---------------------------STICKY-HEADER---------------------------*/
 
@@ -524,11 +527,34 @@ h4 {
     }
     .menu-list {
         display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        width: 60%;
+        margin-top: 0;
+        background: rgba(0, 0, 0, .95);
+    }
+    .menu-list li {
+        margin: 8% 0 0 0;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        float: none;
     }
     .main-header {
         position: relative;
     }
-    .menu-icon {
+    .menu-btn {
         position: absolute;
         top: 25%;
         right: 5%;
